@@ -93,14 +93,14 @@ export default function MySwiper({
             ref={prevRef}
             className="absolute top-1/2 -translate-y-1/2 left-0 md:-left-4 bg-primary-light-800 text-primary w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center z-10 hover:bg-primary hover:text-white transition"
           >
-            &#10094;
+            <i className="fa-solid fa-chevron-left"></i>
           </button>
 
           <button
             ref={nextRef}
             className="absolute top-1/2 -translate-y-1/2 right-0 md:-right-4 bg-primary-light-800 text-primary w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center z-10 hover:bg-primary hover:text-white transition"
           >
-            &#10095;
+            <i className="fa-solid fa-chevron-right"></i>
           </button>
         </>
       )}

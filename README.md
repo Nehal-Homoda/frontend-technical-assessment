@@ -2,6 +2,26 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+## Demo User Credentials
+
+To test login and cart features, you can use the following demo user:
+
+| Field    | Value      |
+| -------- | ---------- |
+| Username | emilys     |
+| Password | emilyspass |
+
+Simply go to [http://localhost:3000/login](http://localhost:3000/login) and enter these credentials.
+
+### Registration & Data Handling
+
+- The registration form is **simulated** and does **not** connect to a real database.
+- Any data you enter will be handled temporarily via API calls to simulate user creation.
+- Product and cart data are fetched and managed using the [DummyJSON API](https://dummyjson.com/), which provides fake JSON data for testing purposes.
+- For a real application, you would need to replace the DummyJSON API with your own backend/database for persistent storage.
+
+### Running Locally
+
 First, run the development server:
 
 ```bash

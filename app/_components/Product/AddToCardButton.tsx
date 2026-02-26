@@ -2,7 +2,6 @@
 import { addProductItem } from "@/store/productCart/productCartSlice";
 import { AppDispatch } from "@/store/store";
 import { Product } from "@/app/_interfaces/products.interface";
-import React from "react";
 import { useDispatch } from "react-redux";
 
 

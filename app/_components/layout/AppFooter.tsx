@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 export default function AppFooter() {
 
@@ -15,7 +14,7 @@ export default function AppFooter() {
                             Brand
                         </Link>
 
-                        <p className="text-primary-light-500  mt-7 max-w-[40rem] mb-20">
+                        <p className="text-primary-light-500  mt-7 max-w-160 mb-20">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Minus a accusamus mollitia totam esse.
                             Nesciunt, eius eveniet distinctio sint saepe tempora
