@@ -32,7 +32,7 @@ export default function ProductCard({ product }: Props) {
           {product.images?.map((img, index) => (
             <div
               key={index}
-              className="w-full aspect-3/2 bg-gray-50 overflow-hidden rounded-t-lg"
+              className="w-full relative aspect-3/2 bg-gray-50 overflow-hidden rounded-t-lg"
             >
               <Image
                 src={img}
