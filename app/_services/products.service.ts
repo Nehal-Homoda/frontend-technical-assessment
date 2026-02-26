@@ -66,29 +66,30 @@ export async function getSingleProduct(
 }
 
 
-export async function createProduct(productData: {
+export type ProductCreateInput = {
   title: string;
   description: string;
   price: number;
   category: string;
-}): Promise<any> {
+  images?: string[]; // ✅ optional array of image URLs
+};
+
+export async function createProduct(data: ProductCreateInput) {
   try {
     const response = await fetch("https://dummyjson.com/products/add", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(productData),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
     });
 
-    if (!response.ok) {
-      throw new Error("Failed to create product");
-    }
+    if (!response.ok) throw new Error("Failed to create product");
 
-    return await response.json();
+    const product = await response.json();
+    return product;
   } catch (error) {
-    console.log("createProduct error:", error);
+    console.error(error);
     return null;
   }
 }
+
 

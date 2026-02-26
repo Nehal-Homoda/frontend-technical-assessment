@@ -5,7 +5,7 @@ import { getAllProducts } from "./_services/products.service";
 import { getAllCategories } from "./_services/categories.service";
 
 export default async function Home() {
-  const productList = await getAllProducts();
+  // const productList = await getAllProducts();
   const categoryList = await getAllCategories();
 
   return (
@@ -13,7 +13,7 @@ export default async function Home() {
       <div className="container pt-10 pb-20">
         <ProductsListing
           categories={categoryList || []}
-          products={productList || []}
+          
         />
       </div>
     </>
