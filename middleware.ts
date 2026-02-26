@@ -6,9 +6,8 @@ export default async function middleware(req: NextRequest) {
   if (jwt) {
     return NextResponse.next();
   }
-  return NextResponse.redirect(
-    `${process.env.NEXTAUTH_URL}/login`,
-  );
+  const loginUrl = new URL("/login", req.url);
+  return NextResponse.redirect(loginUrl);
 }
 export const config = {
   matcher: ["/cart"],
